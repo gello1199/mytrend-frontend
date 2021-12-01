@@ -12,15 +12,15 @@ class Itemslist extends React.Component {
     return (
         <div>
           Items List 
-          <ul>
-            
-          </ul>  
+           {this.props.items.map(i => <li key={i.id}>{i.name} - {i.description} - ${i.price} - Likes: {i.likes} - {i.category} </li>)}
         </div>
     );
     }
 }
 
+const mapStateToProps = state => ({ items: state })
+
 const mapDispatchToProps = dispatch => ({
     dispatchSetItems: () => dispatch( setItem() )
 })
-export default connect(null, mapDispatchToProps)(Itemslist)
+export default connect(mapStateToProps, mapDispatchToProps)(Itemslist)
