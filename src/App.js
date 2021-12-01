@@ -1,9 +1,10 @@
 import './App.css';
+import Itemslist from './Components/itemsList';
 
 function App() {
   return (
     <div>
-    Test
+      <Itemslist />
     </div>
   );
 }

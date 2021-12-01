@@ -1,8 +1,7 @@
 export default function itemsReducer(state = [], action) {
     switch (action.type) {
-        // case value:
-            
-        //     break;
+        case "SET_ITEMS":
+            return [...state, action.item]
     
         default:
             return state
