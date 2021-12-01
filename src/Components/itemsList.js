@@ -1,11 +1,26 @@
 import React from 'react';
+import { setItem } from '../Redux/actions/items';
+import { connect } from 'react-redux';
 
-const Itemslist = () => {
+class Itemslist extends React.Component {
+
+    componentDidMount() {
+        this.props.dispatchSetItems()
+    }
+
+    render() {
     return (
         <div>
-          Items List   
+          Items List 
+          <ul>
+            
+          </ul>  
         </div>
     );
+    }
 }
 
-export default Itemslist;
+const mapDispatchToProps = dispatch => ({
+    dispatchSetItems: () => dispatch( setItem() )
+})
+export default connect(null, mapDispatchToProps)(Itemslist)
