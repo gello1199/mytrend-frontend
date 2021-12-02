@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Itemsform = () => {
-    return (
-        <div>
-            Add New Item
-        </div>
-    );
+class Itemsform extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
 }
 
 export default Itemsform;
+
