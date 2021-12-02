@@ -9,10 +9,10 @@ const Navbar = () => {
     return (
         <div>
             <Switch>
-            <Route path='/home' render={Welcomepage} />
-            <Route path='/trends' render={itemsList} />
-            <Route path='/new' render={Itemsform} />
-            <Route path='/favorites' render={Itemsfavorites} />
+            <Route path='/home' component={Welcomepage} />
+            <Route path='/trends' component={itemsList} />
+            <Route path='/new' component={Itemsform} />
+            <Route path='/favorites' component={Itemsfavorites} />
             </Switch>
         </div>
     );

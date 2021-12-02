@@ -1,19 +1,18 @@
 import './App.css';
-import Itemslist from './Components/itemsList';
 // import Welcomepage from './Components/welcomePage';
 import { NavLink } from 'react-router-dom';
+import Navbar from './Components/NavBar';
 
 function App() {
   return (
     <div>
-      <div class="nav-links">
+      <div className="nav-links">
         <NavLink to='/home'>Home</NavLink>
         <NavLink to='/trends'>Trends</NavLink> 
         <NavLink to='/new'>Add A New Look</NavLink>
-        <NavLink to='/favorites'>My Trends</NavLink>
+        <NavLink to='/favorites'>Favorites</NavLink>
       </div>
-      {/* <Welcomepage /> */}
-      <Itemslist />
+      <Navbar />
     </div>
   );
 }
