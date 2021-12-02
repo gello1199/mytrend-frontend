@@ -1,4 +1,5 @@
 import React from 'react';
+import Itemcard from './itemCard';
 import { setItem } from '../Redux/actions/items';
 import { connect } from 'react-redux';
 
@@ -12,7 +13,7 @@ class Itemslist extends React.Component {
     return (
         <div>
           Items List 
-           {this.props.items.map(i => <li key={i.id}>{i.name} - {i.description} - ${i.price} - Likes: {i.likes} - {i.category} </li>)}
+          {this.props.items.map(i => <Itemcard {...i} /> )}
         </div>
     );
     }

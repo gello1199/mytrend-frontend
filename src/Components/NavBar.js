@@ -7,7 +7,7 @@ import Itemsfavorites from './itemsFavorites';
 
 const Navbar = () => {
     return (
-        <div>
+        <div className="navbar">
             <Switch>
             <Route path='/home' component={Welcomepage} />
             <Route path='/trends' component={itemsList} />
