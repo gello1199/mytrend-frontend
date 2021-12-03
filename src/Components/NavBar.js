@@ -1,18 +1,18 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import itemsList from './Items/Item/itemsList';
-import Welcomepage from './welcomePage';
-import Itemsform from './Items/Forms/itemsForm';
-import Itemsfavorites from './itemsFavorites';
+import ItemsList from './Items/Item/ItemsList';
+import WelcomePage from './WelcomePage';
+import ItemsFavorites from './itemsFavorites';
+import ItemsForm from './Items/Forms/ItemsForm';
 
 const Navbar = () => {
     return (
         <div className="navbar">
             <Switch>
-            <Route path='/home' component={Welcomepage} />
-            <Route path='/trends' component={itemsList} />
-            <Route path='/new' component={Itemsform} />
-            <Route path='/favorites' component={Itemsfavorites} />
+            <Route path='/home' component={WelcomePage} />
+            <Route path='/trends' component={ItemsList} />
+            <Route path='/new' component={(routerProps) => <ItemsForm history={routerProps.history} /> } />
+            <Route path='/favorites' component={ItemsFavorites} />
             </Switch>
         </div>
     );

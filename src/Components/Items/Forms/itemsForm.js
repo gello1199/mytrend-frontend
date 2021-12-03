@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addItem } from '../../../Redux/actions/items';
 
-class Itemsform extends Component {
+class ItemsForm extends Component {
 
     state = {
-        item: {
         name: "",
         description: "",
         price: "",
         image: "",
         category: ""
-    }
     }
 
     handleChange = (event) => {
@@ -22,7 +21,7 @@ class Itemsform extends Component {
     handleSubmit = event => {
         event.preventDefault()
 
-        this.props.dispatchAddItem()
+        this.props.dispatchAddItem(this.state)
 
         this.setState({
             item: {
@@ -91,9 +90,9 @@ class Itemsform extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-    dispatchAddItem: (item) => dispatch(item)
+    dispatchAddItem: (item) => dispatch(addItem(item))
     }
 }
 
-export default connect(null, mapDispatchToProps) (Itemsform);
+export default connect(null, mapDispatchToProps) (ItemsForm);
 

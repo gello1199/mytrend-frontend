@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Itemcard = (props) => {
+const ItemCard = (props) => {
+    // console.log(props)
+
 
     return (
         <div key={props.id} className="item-card">
@@ -15,4 +17,4 @@ const Itemcard = (props) => {
 
 }
 
-export default Itemcard;
+export default ItemCard;

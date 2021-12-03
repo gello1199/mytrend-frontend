@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Welcomepage = () => {
+const WelcomePage = () => {
     return (
         <div>
             Welcome To MyTrend!
@@ -8,4 +8,4 @@ const Welcomepage = () => {
     );
 }
 
-export default Welcomepage;
+export default WelcomePage;

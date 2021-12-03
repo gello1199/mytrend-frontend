@@ -6,4 +6,16 @@ export const setItem = () => {
     }
 }
 
-export const addItem = (item) => ({type: "ADD_ITEM", payload: item})
+export const addItem = (data) => {
+    return (dispatch) => {
+        fetch('http://localhost:3000/items', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }) 
+        .then(resp => resp.json())
+        .then(data => dispatch({type: "ADD_ITEM", payload: data}))
+    }
+}

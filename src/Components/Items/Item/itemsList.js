@@ -1,9 +1,9 @@
 import React from 'react';
-import Itemcard from './itemCard';
+import ItemCard from './ItemCard';
 import { setItem } from '../../../Redux/actions/items';
 import { connect } from 'react-redux';
 
-class Itemslist extends React.Component {
+class ItemsList extends React.Component {
 
     componentDidMount() {
         this.props.dispatchSetItems()
@@ -13,7 +13,7 @@ class Itemslist extends React.Component {
     return (
         <div>
           Items List 
-          {this.props.items.map(i => <Itemcard {...i} /> )}
+          {this.props.items.map(i => <ItemCard {...i} /> )}
         </div>
     );
     }
@@ -24,4 +24,4 @@ const mapStateToProps = state => ({ items: state })
 const mapDispatchToProps = dispatch => ({
     dispatchSetItems: () => dispatch( setItem() )
 })
-export default connect(mapStateToProps, mapDispatchToProps)(Itemslist)
+export default connect(mapStateToProps, mapDispatchToProps)(ItemsList)
