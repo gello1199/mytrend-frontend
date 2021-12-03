@@ -6,3 +6,10 @@ body {
     padding: 5px
 }
 
+.item-card {
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+    text-align: center;
+}
+

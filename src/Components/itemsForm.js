@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 class Itemsform extends Component {
 
     state = {
+        item: {
         name: "",
         description: "",
         price: "",
         image: "",
         category: ""
+    }
     }
 
     handleChange = (event) => {
@@ -20,11 +22,13 @@ class Itemsform extends Component {
         event.preventDefault()
 
         this.setState({
-            name: "",
-            description: "",
-            price: "",
-            image: "",
-            category: ""
+            item: {
+                name: "",
+                description: "",
+                price: "",
+                image: "",
+                category: ""
+            }
         })
     }
 
