@@ -13,3 +13,6 @@ body {
     text-align: center;
 }
 
+.selected {
+    color: grey;
+}
