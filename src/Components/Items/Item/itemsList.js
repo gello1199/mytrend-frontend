@@ -1,6 +1,6 @@
 import React from 'react';
 import Itemcard from './itemCard';
-import { setItem } from '../Redux/actions/items';
+import { setItem } from '../../../Redux/actions/items';
 import { connect } from 'react-redux';
 
 class Itemslist extends React.Component {

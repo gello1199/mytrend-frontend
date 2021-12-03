@@ -3,6 +3,9 @@ export default function itemsReducer(state = [], action) {
         case "SET_ITEMS":
             return action.payload
 
+        case "ADD_ITEM":
+            return [...state, action.payload]
+
     
         default:
             return state

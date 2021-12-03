@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Itemsform extends Component {
 
@@ -20,6 +21,8 @@ class Itemsform extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
+
+        this.props.dispatchAddItem()
 
         this.setState({
             item: {
@@ -86,5 +89,11 @@ class Itemsform extends Component {
     }
 }
 
-export default Itemsform;
+const mapDispatchToProps = dispatch => {
+    return {
+    dispatchAddItem: (item) => dispatch(item)
+    }
+}
+
+export default connect(null, mapDispatchToProps) (Itemsform);
 

@@ -5,3 +5,5 @@ export const setItem = () => {
         .then(data => dispatch({type: "SET_ITEMS", payload: data}))
     }
 }
+
+export const addItem = (item) => ({type: "ADD_ITEM", payload: item})
