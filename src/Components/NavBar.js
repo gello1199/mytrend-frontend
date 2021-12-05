@@ -11,7 +11,7 @@ const Navbar = () => {
             <Switch>
             <Route path='/home' component={WelcomePage} />
             <Route path='/trends' component={ItemsList} />
-            <Route path='/new' component={(routerProps) => <ItemsForm history={routerProps.history} /> } />
+            <Route path='/new' component={(routerProps) => <ItemsForm routerHistory={routerProps.history} /> } />
             <Route path='/favorites' component={ItemsFavorites} />
             </Switch>
         </div>

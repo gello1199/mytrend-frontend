@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { addItem } from '../../../Redux/actions/items';
 
 class ItemsForm extends Component {
-    
+
     state = {
         name: "",
         description: "",
@@ -22,15 +22,14 @@ class ItemsForm extends Component {
         event.preventDefault()
 
         this.props.dispatchAddItem(this.state)
+        this.props.routerHistory.push('/trends')
 
         this.setState({
-            item: {
                 name: "",
                 description: "",
                 price: "",
                 image: "",
                 category: ""
-            }
         })
     }
 
