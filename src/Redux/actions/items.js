@@ -21,3 +21,13 @@ export const addItem = (data) => {
         .then(data => dispatch({type: "ADD_ITEM", payload: data}))
     }
 }
+
+export const deleteItem  = (id) => {
+    return (dispatch) => {
+        fetch(`http://localhost:3000/items/${id}`, {
+            method: "DELETE"
+        })
+        .then(resp => resp.json())
+        .then(itemId => dispatch({type: "DELETE_PERSON", payload: itemId}))
+    }
+}
