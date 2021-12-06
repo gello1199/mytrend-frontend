@@ -31,3 +31,4 @@ export const deleteItem  = (id) => {
         .then(itemId => dispatch({type: "DELETE_PERSON", payload: itemId}))
     }
 }
+

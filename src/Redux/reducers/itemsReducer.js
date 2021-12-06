@@ -11,6 +11,19 @@ export default function itemsReducer(state = [], action) {
 
             return {...state, newItem}
 
+        // case "EDIT_ITEM":
+
+        //     const itemIndex = state.findIndex(i => i.id === action.payload.id)
+
+        //     return {
+        //         ...state,
+        //         [
+        //             ...state.slice(0, itemIndex),
+        //             action.payload,
+        //             ...state.slice(itemIndex + 1)
+        //         ]
+        //     }
+
     
         default:
             return state
