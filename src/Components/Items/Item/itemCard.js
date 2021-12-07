@@ -26,7 +26,7 @@ const ItemCard = (props) => {
            <button onClick={handleFavorite}>Add To Favorites</button> <br />
             <button onClick={handleDelete}>Delete Item</button> <br />
            {/* <p>Category: {props.category}</p> */}
-           <img src={props.image} alt="trends" width="200" height="250" />
+           <img src={props.image} alt="trends" className="image" />
         </div>
         
     );
