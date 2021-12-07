@@ -32,18 +32,24 @@ export const deleteItem  = (id) => {
     }
 }
 
-export const editItem = (item) => {
-    return (dispatch) => {
-        fetch(`http://localhost:3000/items/${item.id}`, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify(item)
-        })
-        .then(resp => resp.json())
-        .then(i => dispatch({type: "EDIT_ITEM", payload: i}))
+// export const editItem = (item) => {
+//     return (dispatch) => {
+//         fetch(`http://localhost:3000/items/${item.id}`, {
+//             method: "PATCH",
+//             headers: {
+//                 "Content-Type": "application/json",
+//                 "Accept": "application/json"
+//             },
+//             body: JSON.stringify(item)
+//         })
+//         .then(resp => resp.json())
+//         .then(i => dispatch({type: "EDIT_ITEM", payload: i}))
+//     }
+// }
+
+export const addToFavorites = (item) => {
+    return {
+        type: "ADD_TO_FAVORITES",
+        payload: item
     }
 }
-

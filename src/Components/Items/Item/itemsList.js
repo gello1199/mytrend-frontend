@@ -11,7 +11,7 @@ class ItemsList extends React.Component {
 
     render() {
     return (
-        <div>
+        <div className="items-list">
           Items List 
           {this.props.items.map(i => <ItemCard key={i.id} {...i} /> )}
         </div>
@@ -19,7 +19,7 @@ class ItemsList extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({ items: state })
+const mapStateToProps = state => ({ items: state.items })
 
 const mapDispatchToProps = dispatch => ({
     dispatchSetItems: () => dispatch( setItem() )

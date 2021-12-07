@@ -1,5 +1,4 @@
 import './App.css';
-// import Welcomepage from './Components/welcomePage';
 import { NavLink } from 'react-router-dom';
 import Navbar from './Components/NavBar';
 
