@@ -7,23 +7,19 @@ export default function itemsReducer(state = [], action) {
             return [...state, action.payload]
 
         case "DELETE_ITEM":
-            const newItem = state.filter(item => item.id !== action.payload) 
+            const filteredItems = state.filter(item => item.id !== action.payload) 
 
-            return {...state, newItem}
+            return filteredItems
 
-        // case "EDIT_ITEM":
+        case "EDIT_ITEM":
 
-        //     const itemIndex = state.findIndex(i => i.id === action.payload.id)
+            const itemIndex = state.findIndex(i => i.id === action.payload.id)
 
-        //     return {
-        //         ...state,
-        //         [
-        //             ...state.slice(0, itemIndex),
-        //             action.payload,
-        //             ...state.slice(itemIndex + 1)
-        //         ]
-        //     }
-
+            return [
+                ...state.slice(0, itemIndex),
+                action.payload,
+                ...state.slice(itemIndex + 1)
+            ]
     
         default:
             return state

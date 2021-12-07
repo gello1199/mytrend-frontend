@@ -6,6 +6,7 @@ const ItemCard = (props) => {
     // console.log(props)
 
     function handleDelete() {
+        console.log(typeof props.id)
         props.dispatchDeleteItem(props.id)
     }
 
@@ -15,7 +16,11 @@ const ItemCard = (props) => {
            <p>Description: {props.description}</p>
            <p>Price: ${props.price}</p>
            <p>Likes: {props.likes}</p>
-           <button onClick={handleDelete}>Delete Item</button>
+           <p><button>Add To Favorites</button></p>
+            <span>
+            <button>Edit Item</button>
+            <button onClick={handleDelete}>Delete Item</button>
+            </span>
            <p>Category: {props.category}</p>
            <img src={props.image} alt="trends" width="200" height="250" />
         </div>

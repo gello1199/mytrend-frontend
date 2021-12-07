@@ -28,7 +28,7 @@ export const deleteItem  = (id) => {
             method: "DELETE"
         })
         .then(resp => resp.json())
-        .then(itemId => dispatch({type: "DELETE_PERSON", payload: itemId}))
+        .then(itemId => dispatch({type: "DELETE_ITEM", payload: id}))
     }
 }
 
@@ -43,7 +43,7 @@ export const editItem = (item) => {
             body: JSON.stringify(item)
         })
         .then(resp => resp.json())
-        .then(i => dispatch({type: "EDIT_PERSON", payload: i}))
+        .then(i => dispatch({type: "EDIT_ITEM", payload: i}))
     }
 }
 
