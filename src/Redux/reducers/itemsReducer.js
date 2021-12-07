@@ -20,6 +20,11 @@ export default function itemsReducer(state = [], action) {
                 action.payload,
                 ...state.slice(itemIndex + 1)
             ]
+
+        case "ADD_TO_FAVORITES":
+            return [
+                ...state, action.payload.id
+            ]
     
         default:
             return state

@@ -10,6 +10,10 @@ const ItemCard = (props) => {
         props.dispatchDeleteItem(props.id)
     }
 
+    function handleFavorite() {
+       
+    }
+
     return (
         <div key={props.id} className="item-card">
            <p>Name: {props.name}</p>
@@ -18,11 +22,11 @@ const ItemCard = (props) => {
            <p>Likes: {props.likes}</p>
            <p><button>Add To Favorites</button></p>
             <span>
-            <button>Edit Item</button>
+            <button onClick={handleFavorite}>Edit Item</button>
             <button onClick={handleDelete}>Delete Item</button>
             </span>
            <p>Category: {props.category}</p>
-           <img src={props.image} alt="trends" width="200" height="250" />
+           <p><img src={props.image} alt="trends" width="200" height="250" /></p>
         </div>
     );
 
