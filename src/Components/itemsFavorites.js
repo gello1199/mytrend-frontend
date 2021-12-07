@@ -4,6 +4,7 @@ const Itemsfavorites = () => {
     return (
         <div>
             My Favorites
+            
         </div>
     );
 }

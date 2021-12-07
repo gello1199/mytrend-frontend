@@ -1,5 +1,5 @@
 import React from 'react';
-import { deleteItem } from '../../../Redux/actions/items';
+import { addToFavorites, deleteItem } from '../../../Redux/actions/items';
 import { connect } from 'react-redux';
 
 const ItemCard = (props) => {
@@ -12,24 +12,21 @@ const ItemCard = (props) => {
 
     function handleFavorite() {
         console.log(props)
-        // props.dispatchAddToFavorites(props.id)
+        props.dispatchAddToFavorites(props.id)
         // this.props.routerHistory.push('/favorites')
     }
 
     return (
        
         <div key={props.id} className="item-card">
-           <p>Name: {props.name}</p>
-           <p>Description: {props.description}</p>
-           <p>Price: ${props.price}</p>
+           Name: {props.name} <br />
+           Description: {props.description} <br />
+           Price: ${props.price} <br />
            {/* <p>Likes: {props.likes}</p> */}
-           <p><button onClick={handleFavorite}>Add To Favorites</button></p>
-            <span>
-            {/* <button>Edit Item</button> */}
-            <button onClick={handleDelete}>Delete Item</button>
-            </span>
+           <button onClick={handleFavorite}>Add To Favorites</button> <br />
+            <button onClick={handleDelete}>Delete Item</button> <br />
            {/* <p>Category: {props.category}</p> */}
-           <p><img src={props.image} alt="trends" width="200" height="250" /></p>
+           <img src={props.image} alt="trends" width="200" height="250" />
         </div>
         
     );
@@ -39,6 +36,7 @@ const ItemCard = (props) => {
 
 const mapDispatchToProps = dispatch => ({
     dispatchDeleteItem: (id) => dispatch( deleteItem(id) ),
+    dispatchAddToFavorites: (id) => dispatch( addToFavorites(id) )
 })
 
 export default connect(null, mapDispatchToProps)(ItemCard);

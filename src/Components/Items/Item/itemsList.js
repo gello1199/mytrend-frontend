@@ -12,7 +12,7 @@ class ItemsList extends React.Component {
     render() {
     return (
         <div className="items-list">
-          Items List 
+          <h2>Items List:</h2>
           {this.props.items.map(i => <ItemCard key={i.id} {...i} /> )}
         </div>
     );
