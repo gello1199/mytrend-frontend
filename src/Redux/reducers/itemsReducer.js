@@ -35,9 +35,9 @@ export default function itemsReducer(state = {
         case "ADD_TO_FAVORITES":
             return {
                 ...state,
-                favorites: action.payload
+                favorites: [...state.favorites, action.payload]
             }
-    
+            
         default:
             return state
     }

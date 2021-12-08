@@ -12,7 +12,7 @@ const ItemCard = (props) => {
 
     function handleFavorite() {
         console.log(props)
-        props.dispatchAddToFavorites(props.id)
+        // props.dispatchAddToFavorites(props.id)
         // this.props.routerHistory.push('/favorites')
     }
 
@@ -23,8 +23,8 @@ const ItemCard = (props) => {
            Description: {props.description} <br />
            Price: ${props.price} <br />
            {/* <p>Likes: {props.likes}</p> */}
-           <button onClick={handleFavorite}>Add To Favorites</button> <br />
-            <button onClick={handleDelete}>Delete Item</button> <br />
+           <button className="button" onClick={handleFavorite}>Add To Favorites</button> <br />
+            <button className="button" onClick={handleDelete}>Delete Item</button> <br />
            {/* <p>Category: {props.category}</p> */}
            <img src={props.image} alt="trends" className="image" />
         </div>

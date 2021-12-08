@@ -29,60 +29,69 @@ class ItemsForm extends Component {
                 description: "",
                 price: "",
                 image: "",
-                category: ""
+                // category: ""
         })
     }
 
     render() {
         // console.log(this.state)
         return (
+            <div className="item-form">
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="name-input">Name: </label>
+                <div>
+                {/* <label htmlFor="name-input">Name: </label> */}
                 <input 
                 name="name"
                 id="name-input" 
                 type="text" 
                 value={this.state.name}
                 onChange={this.handleChange}
+                placeholder="Name"
                 /> <br />
+                </div>
 
-                <label htmlFor="descrip-input">Description: </label> 
+                <div>
+                {/* <label htmlFor="descrip-input">Description: </label>  */}
                 <textarea 
                 name="description"
                 id="descrip-input" 
                 value={this.state.description}
                 onChange={this.handleChange}
+                placeholder="Description"
                 /> <br />
+                </div>
 
-                <label htmlFor="price-input">Price: </label> 
+                {/* <label htmlFor="price-input">Price: </label>  */}
                 <input 
                 name="price"
                 id="price-input" 
                 type="text" 
                 value={this.state.price}
                 onChange={this.handleChange}
+                placeholder="Price"
                 /> <br />
 
-                <label htmlFor="image-input">Image URL: </label> 
+                {/* <label htmlFor="image-input">Image URL: </label>  */}
                 <input 
                 name="image"
                 id="image-input" 
                 type="text" 
                 value={this.state.image}
                 onChange={this.handleChange} 
+                placeholder="Image URL"
                 /> <br />
 
-                <label htmlFor="category-input">Category: </label> 
-                <input 
-                name="category"
-                id="category-input" 
-                type="text" 
-                value={this.state.category} 
-                onChange={this.handleChange}
-                /> <br />
+                {/* <label htmlFor="category-input">Category: </label>  */}
+                <label htmlFor="category">Select a Category:</label>
+                <select name="category" id="category-input" >
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+                </select>
+                <br />
                 
-                <input type="submit" />
+                <input className="button" type="submit" />
             </form>
+            </div>
         );
     }
 }
