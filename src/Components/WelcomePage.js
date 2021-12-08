@@ -9,4 +9,3 @@ const Welcomepage = () => {
 }
 
 export default Welcomepage;
-
