@@ -29,7 +29,7 @@ class ItemsForm extends Component {
                 description: "",
                 price: "",
                 image: "",
-                // category: ""
+                category: ""
         })
     }
 
@@ -83,7 +83,11 @@ class ItemsForm extends Component {
 
                 {/* <label htmlFor="category-input">Category: </label>  */}
                 <label htmlFor="category">Select a Category:</label>
-                <select name="category" id="category-input" >
+                <select 
+                name="category" 
+                id="category-input"
+                onChange={this.handleChange}
+                value={this.state.category} >
                 <option value="men">Men</option>
                 <option value="women">Women</option>
                 </select>
