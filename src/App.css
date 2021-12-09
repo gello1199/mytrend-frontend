@@ -14,36 +14,95 @@ body {
 
 .nav-links {
     /* padding: 5px; */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: 'Ariel', Courier, monospace;
-    font-size: x-large;
-    display: block;
-    color: white;
+    /* list-style-type: none; */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* overflow: hidden; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    /* display: block; */
+    /* color: white; */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-#nav-home:link {
+#nav-home {
  margin: 30px;
  text-decoration: none;
-
 }
+
+#nav-home:link, #nav-home:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#nav-home:hover, #nav-home:active {
+    background-color: black;
+    color: white;
+}
+
 
 #nav-trend {
     margin: 30px;
+    text-decoration: none;
 
+}
+
+#nav-trend:link, #nav-trend:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#nav-trend:hover, #nav-trend:active {
+    background-color: black;
+    color: white;
 }
 
 #nav-new {
     margin: 30px;
+    text-decoration: none;
+}
+
+#nav-new:link, #nav-new:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#nav-new:hover, #nav-new:active {
+    background-color: black;
+    color: white;
 }
 
 #nav-favorite {
     margin: 30px;
+    text-decoration: none;
+}
+
+#nav-favorite:link, #nav-favorite:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#nav-favorite:hover, #nav-favorite:active {
+    background-color: black;
+    color: white;
 }
 
 .selected {

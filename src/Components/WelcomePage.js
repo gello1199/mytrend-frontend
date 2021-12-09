@@ -24,8 +24,8 @@ const WelcomePage = () => {
         images={images}
         showBullets={true}
         showNavs={true}
-        
-      />
+            
+        />
     </div>
     );
 }
