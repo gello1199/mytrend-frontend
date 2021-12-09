@@ -40,7 +40,7 @@ export const deleteItem  = (id) => {
     }
 }
 
-export const addToFavorites = (item) => {
+export const editFavorites = (item) => {
     return (dispatch) => {
         fetch(`http://localhost:3000/items/${item.id}`, {
             method: "PATCH",
@@ -50,11 +50,13 @@ export const addToFavorites = (item) => {
             },
             body: JSON.stringify({
                 item: {
-                favorite: true
+                favorite: !item.favorite
             }})
         })
         .then(resp => resp.json())
-        .then(i => dispatch({type: "ADD_TO_FAVORITES", payload: i}))
+        .then(i => dispatch({type: "EDIT_FAVORITES", payload: i}))
     }
 }
+
+
 

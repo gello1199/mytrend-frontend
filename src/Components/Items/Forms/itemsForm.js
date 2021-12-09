@@ -37,6 +37,7 @@ class ItemsForm extends Component {
         // console.log(this.state)
         return (
             <div className="item-form">
+            <h3>Create A New Look</h3>
             <form onSubmit={this.handleSubmit}>
                 <div>
                 {/* <label htmlFor="name-input">Name: </label> */}

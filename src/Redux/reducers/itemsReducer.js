@@ -11,7 +11,7 @@ export default function itemsReducer(state = [], action) {
 
             return filteredItems
 
-        case "ADD_TO_FAVORITES":
+        case "EDIT_FAVORITES":
 
             const itemIndex = state.findIndex(i => i.id === action.payload.id )
 
@@ -20,6 +20,7 @@ export default function itemsReducer(state = [], action) {
                 action.payload,
                 ...state.slice(itemIndex + 1)
             ]
+
             
         default:
             return state

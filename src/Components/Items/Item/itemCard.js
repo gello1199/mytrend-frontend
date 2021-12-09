@@ -1,5 +1,5 @@
 import React from 'react';
-import { addToFavorites, deleteItem } from '../../../Redux/actions/items';
+import { editFavorites, deleteItem } from '../../../Redux/actions/items';
 import { connect } from 'react-redux';
 
 const ItemCard = (props) => {
@@ -13,7 +13,6 @@ const ItemCard = (props) => {
     function handleFavorite() {
         console.log(props)
         props.dispatchAddToFavorites(props)
-
     }
 
     return (
@@ -22,7 +21,13 @@ const ItemCard = (props) => {
            Name: {props.name} <br />
            Description: {props.description} <br />
            Price: ${props.price} <br />
-           <button className="button" onClick={handleFavorite}>Add To Favorites</button> <br />
+            
+           <button 
+           className="button" 
+           onClick={handleFavorite}
+           >
+           {props.favorite ? "Remove From Favorites" : "Add To Favorites"} 
+           </button>  
             <button className="button" onClick={handleDelete}>Delete Item</button> <br />
            <img src={props.image} alt="trends" className="image" />
         </div>
@@ -34,7 +39,7 @@ const ItemCard = (props) => {
 
 const mapDispatchToProps = dispatch => ({
     dispatchDeleteItem: (id) => dispatch( deleteItem(id) ),
-    dispatchAddToFavorites: (id) => dispatch( addToFavorites(id) )
+    dispatchAddToFavorites: (id) => dispatch( editFavorites(id) )
 })
 
 export default connect(null, mapDispatchToProps)(ItemCard);
