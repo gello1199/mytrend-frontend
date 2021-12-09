@@ -6,7 +6,7 @@ export const setItem = () => {
     }
 }
 
-export const addItem = (data) => {
+export const addItem = (item, redirect) => {
     return (dispatch) => {
         fetch('http://localhost:3000/items', {
             method: "POST",
@@ -15,10 +15,18 @@ export const addItem = (data) => {
                 "Accept": "application/json"
 
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(item)
         }) 
         .then(resp => resp.json())
-        .then(data => dispatch({type: "ADD_ITEM", payload: data}))
+        .then(data => {if(data.error) {
+            alert(data.error.join(', '))
+        } else {
+            dispatch({type: "ADD_ITEM", payload: data})
+            // debugger
+             redirect.push('/trends')
+            //  redirect()
+        }})
+
     }
 }
 
@@ -40,13 +48,13 @@ export const addToFavorites = (item) => {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: JSON.stringify(item)
+            body: JSON.stringify({
+                item: {
+                favorite: true
+            }})
         })
         .then(resp => resp.json())
         .then(i => dispatch({type: "ADD_TO_FAVORITES", payload: i}))
     }
 }
-
-// figure out how data structured on the backend
-// how i want redux setup
 

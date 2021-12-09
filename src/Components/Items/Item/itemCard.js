@@ -6,13 +6,14 @@ const ItemCard = (props) => {
     // console.log(props)
 
     function handleDelete() {
-        console.log(typeof props.id)
+        // console.log(typeof props.id)
         props.dispatchDeleteItem(props.id)
     }
 
     function handleFavorite() {
         console.log(props)
         props.dispatchAddToFavorites(props)
+
     }
 
     return (

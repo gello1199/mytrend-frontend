@@ -10,6 +10,7 @@ class ItemsList extends React.Component {
     }
 
     render() {
+        console.log(this.props.items)
     return (
         <div className="items-list">
           <h2>Items List:</h2>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Welcomepage = () => {
+const WelcomePage = () => {
     return (
         <div>
-            <h1>Welcome To My Trends</h1>
+            
         </div>
     );
 }
 
-export default Welcomepage;
+export default WelcomePage;

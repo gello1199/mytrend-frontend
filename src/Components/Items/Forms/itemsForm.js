@@ -9,7 +9,7 @@ class ItemsForm extends Component {
         description: "",
         price: "",
         image: "",
-        category: ""
+        category: "men",
     }
 
     handleChange = (event) => {
@@ -19,17 +19,19 @@ class ItemsForm extends Component {
     }
 
     handleSubmit = event => {
+        console.log(this.props)
         event.preventDefault()
 
-        this.props.dispatchAddItem(this.state)
-        this.props.routerHistory.push('/trends')
+        console.log(this.testFunction)
+        this.props.dispatchAddItem(this.state, this.props.routerHistory)
+        // this.props.routerHistory.push('/trends')
 
         this.setState({
                 name: "",
                 description: "",
                 price: "",
                 image: "",
-                category: ""
+                category: "men",
         })
     }
 
@@ -102,7 +104,7 @@ class ItemsForm extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-    dispatchAddItem: (item) => dispatch(addItem(item))
+    dispatchAddItem: (item, redirect) => dispatch(addItem(item, redirect))
     }
 }
 

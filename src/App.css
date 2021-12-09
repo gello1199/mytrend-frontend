@@ -13,7 +13,37 @@ body {
 }
 
 .nav-links {
-    padding: 5px;
+    /* padding: 5px; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Ariel', Courier, monospace;
+    font-size: x-large;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav-home:link {
+ margin: 30px;
+ text-decoration: none;
+
+}
+
+#nav-trend {
+    margin: 30px;
+
+}
+
+#nav-new {
+    margin: 30px;
+}
+
+#nav-favorite {
+    margin: 30px;
 }
 
 .selected {
