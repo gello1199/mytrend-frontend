@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import ItemCard from './Items/Item/ItemCard';
+import ItemCard from './Items/Item/ItemCard';
 
-const Itemsfavorites = () => {
+const Itemsfavorites = (props) => {
     return (
         <div>
-            {this.state.filter(i => i.favorite )}
+            {props.items.filter(i => i.favorite).map(f => <ItemCard {...f} />)}
+
             
         </div>
     );

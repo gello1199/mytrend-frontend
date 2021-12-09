@@ -19,7 +19,7 @@ class ItemsList extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({ items: state.items })
+const mapStateToProps = state => ({ items: state })
 
 const mapDispatchToProps = dispatch => ({
     dispatchSetItems: () => dispatch( setItem() )

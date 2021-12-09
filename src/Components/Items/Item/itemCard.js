@@ -12,7 +12,7 @@ const ItemCard = (props) => {
 
     function handleFavorite() {
         console.log(props)
-        props.dispatchAddToFavorites(props.id)
+        props.dispatchAddToFavorites(props)
     }
 
     return (
