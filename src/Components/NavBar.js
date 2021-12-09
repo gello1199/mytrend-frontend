@@ -9,10 +9,10 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <Switch>
-            <Route path='/home' component={WelcomePage} />
-            <Route path='/trends' component={ItemsList} />
-            <Route path='/new' component={(routerProps) => <ItemsForm routerHistory={routerProps.history} /> } />
-            <Route path='/favorites' component={ItemsFavorites} />
+            <Route exact path='/' component={WelcomePage} />
+            <Route exact path='/trends' component={ItemsList} />
+            <Route exact path='/new' component={(routerProps) => <ItemsForm routerHistory={routerProps.history} /> } />
+            <Route exact path='/favorites' component={(routerProps) => <ItemsFavorites routerLocation={routerProps.location} /> } />
             </Switch>
         </div>
     );

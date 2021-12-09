@@ -24,11 +24,20 @@ const ItemCard = (props) => {
             
            <button 
            className="button" 
-           onClick={handleFavorite}
-           >
+           onClick={handleFavorite}>
            {props.favorite ? "Remove From Favorites" : "Add To Favorites"} 
-           </button>  
-            <button className="button" onClick={handleDelete}>Delete Item</button> <br />
+           </button> 
+
+            {props.location ? "" : 
+            <button 
+            className="button" 
+            onClick={handleDelete}>
+            Delete Item</button> 
+            }
+            
+            <br />
+            
+            {/* look at routes */}
            <img src={props.image} alt="trends" className="image" />
         </div>
         

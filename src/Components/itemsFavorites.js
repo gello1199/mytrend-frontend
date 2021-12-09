@@ -5,9 +5,7 @@ import ItemCard from './Items/Item/ItemCard';
 const Itemsfavorites = (props) => {
     return (
         <div>
-            {props.items.filter(i => i.favorite).map(f => <ItemCard key={f.id} {...f} />)}
-
-            {/* add toggle to remove favorite  */}
+            {props.items.filter(i => i.favorite).map(f => <ItemCard key={f.id} {...f} location={props.routerLocation} />)}
         </div>
     );
 }
