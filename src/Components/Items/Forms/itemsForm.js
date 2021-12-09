@@ -19,12 +19,10 @@ class ItemsForm extends Component {
     }
 
     handleSubmit = event => {
-        console.log(this.props)
+        // console.log(this.props)
         event.preventDefault()
 
-        console.log(this.testFunction)
         this.props.dispatchAddItem(this.state, this.props.routerHistory)
-        // this.props.routerHistory.push('/trends')
 
         this.setState({
                 name: "",
