@@ -13,7 +13,7 @@ class ItemsList extends React.Component {
         console.log(this.props.items)
     return (
         <div className="items-list">
-          <h2>Items List:</h2>
+          <h2>Select Your Favorite Trends:</h2>
           {this.props.items.map(i => <ItemCard key={i.id} {...i} /> )}
         </div>
     );
