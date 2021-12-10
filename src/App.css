@@ -191,3 +191,10 @@ body {
     display: inline-block;
     margin-top: 3%;
 }
+
+.carousel {
+    width: 60%;
+    height: 700px;
+    background-color: black;
+    display: inline-block;
+}
