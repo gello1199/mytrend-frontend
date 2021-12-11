@@ -24,7 +24,6 @@ export const addItem = (item, redirect) => {
             dispatch({type: "ADD_ITEM", payload: data})
             // debugger
              redirect.push('/trends')
-            //  redirect()
         }})
 
     }
