@@ -1,12 +1,38 @@
 # Getting Started with MyTrend_Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the MyTrends app! This app allows the user to add and view the newest fashion trends, while also curating their top looks in their favorite page. Each item will include a name, price, description, category and image. From the trends page, you can add a look to your favorites, remove from favorites, or delete completely. The app also has additional functionality that enlarges the image when a mouse hovers over the image.
 
-## Available Scripts
+Installation
 
-In the project directory, you can run:
+Please setup backend installation before running the front end. You can find necessary installation guidelines through the Github link below
 
-### `npm start`
+https://github.com/gello1199/mytrend_backend
+
+To run the program:
+
+After taking the necessary steps mentioned in the README on the backend and rails s is running the server, to view the web app in the browser you can run:
+
+ `npm start`
+
+ Please use port :3001 since port :3000 will be running the Rails backend API 
+ 
+ http://localhost:3001 
+
+ Usage
+
+See backend README for installation and setup instructions.
+
+Once the backend server is running through rails s:
+
+After the front end is running in VScode, run npm start to view the web app in the browser.
+
+This app is from the perspective of an admin user where you can create a new fashion trend item, favorite an existing item or delete an item.
+
+Contributing Bug reports and pull requests are welcome on GitHub at https://github.com/gello1199/mytrend-frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
+
+License The gem is available as open source under the terms of the MIT License.
+
+Code of Conduct Everyone interacting in the mytrend_frontend project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
