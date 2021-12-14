@@ -11,7 +11,7 @@ const ItemCard = (props) => {
     }
 
     function handleFavorite() {
-        console.log(props)
+        // console.log(props)
         props.dispatchAddToFavorites(props)
     }
 
@@ -37,7 +37,6 @@ const ItemCard = (props) => {
             
             <br />
             
-            {/* look at routes */}
            <img src={props.image} alt="trends" className="image" />
         </div>
         

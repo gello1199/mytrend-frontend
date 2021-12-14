@@ -40,7 +40,6 @@ class ItemsForm extends Component {
             <h3>Create A New Look</h3>
             <form onSubmit={this.handleSubmit}>
                 <div>
-                {/* <label htmlFor="name-input">Name: </label> */}
                 <input 
                 name="name"
                 id="name-input" 
@@ -52,7 +51,6 @@ class ItemsForm extends Component {
                 </div>
 
                 <div>
-                {/* <label htmlFor="descrip-input">Description: </label>  */}
                 <textarea 
                 name="description"
                 id="descrip-input" 
@@ -62,7 +60,6 @@ class ItemsForm extends Component {
                 /> <br />
                 </div>
 
-                {/* <label htmlFor="price-input">Price: </label>  */}
                 <input 
                 name="price"
                 id="price-input" 
@@ -72,7 +69,6 @@ class ItemsForm extends Component {
                 placeholder="Price"
                 /> <br />
 
-                {/* <label htmlFor="image-input">Image URL: </label>  */}
                 <input 
                 name="image"
                 id="image-input" 
@@ -82,7 +78,6 @@ class ItemsForm extends Component {
                 placeholder="Image URL"
                 /> <br />
 
-                {/* <label htmlFor="category-input">Category: </label>  */}
                 <label htmlFor="category">Select a Category:</label>
                 <select 
                 name="category" 
