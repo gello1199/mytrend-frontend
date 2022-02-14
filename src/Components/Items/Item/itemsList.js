@@ -49,7 +49,7 @@ const mapStateToProps = state => ({ items: state })
 const mapDispatchToProps = dispatch => ({
     dispatchSetItems: () => dispatch( setItem() )
 })
-export default connect(mapStateToProps, mapDispatchToProps)(ItemsList)
+export default connect(mapStateToProps, mapDispatchToProps)(ItemsList);
 
 
 
