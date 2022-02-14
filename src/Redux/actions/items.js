@@ -1,6 +1,6 @@
 export const setItem = () => {
     return (dispatch) => {
-        fetch('http://localhost:3000/items')
+        fetch('https://mytrends-app.herokuapp.com/items')
         .then(resp => resp.json())
         .then(data => dispatch({type: "SET_ITEMS", payload: data}))
     }
@@ -8,7 +8,7 @@ export const setItem = () => {
 
 export const addItem = (item, redirect) => {
     return (dispatch) => {
-        fetch('http://localhost:3000/items', {
+        fetch('https://mytrends-app.herokuapp.com/items', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export const addItem = (item, redirect) => {
 
 export const deleteItem  = (id) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/items/${id}`, {
+        fetch(`https://mytrends-app.herokuapp.com/items/${id}`, {
             method: "DELETE"
         })
         .then(resp => resp.json())
@@ -41,7 +41,7 @@ export const deleteItem  = (id) => {
 
 export const editFavorites = (item) => {
     return (dispatch) => {
-        fetch(`http://localhost:3000/items/${item.id}`, {
+        fetch(`https://mytrends-app.herokuapp.com/items/${item.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
