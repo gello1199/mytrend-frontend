@@ -78,7 +78,7 @@ class ItemsForm extends Component {
                 placeholder="Image URL"
                 /> <br />
 
-                <label htmlFor="category">Select a Category:</label>
+                {/* <label htmlFor="category">Select a Category:</label>
                 <select 
                 name="category" 
                 id="category-input"
@@ -87,7 +87,7 @@ class ItemsForm extends Component {
                 <option value="men">Men</option>
                 <option value="women">Women</option>
                 </select>
-                <br />
+                <br /> */}
                 
                 <input className="button" type="submit" />
             </form>
