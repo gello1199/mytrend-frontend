@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import ItemsList from './Items/Item/ItemsList.js';
+import ItemsList from './Items/Item/ItemsList';
 import WelcomePage from './WelcomePage';
 import ItemsFavorites from './itemsFavorites';
 import ItemsForm from './Items/Forms/ItemsForm';
 
-const Navbar = () => {
+const NavBar = () => {
     return (
         <div className="navbar">
             <Switch>
@@ -18,4 +18,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default NavBar;

@@ -1,6 +1,6 @@
 import './App.css';
 import { NavLink } from 'react-router-dom';
-import Navbar from './Components/NavBar';
+import NavBar from './Components/NavBar';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <NavLink to='/new' className={isActive => isActive ? "selected" : ""} id="nav-new">Add A New Look</NavLink>
         <NavLink to='/favorites' className={isActive => isActive ? "selected" : ""} id="nav-favorite">Favorites</NavLink>
       </div>
-      <Navbar />
+      <NavBar />
     </div>
   );
 }
