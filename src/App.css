@@ -155,7 +155,7 @@ body {
   height: 450px;
   overflow: auto;
   width: 30%;
-  opacity: 90%;
+  /* opacity: 90%; */
   position: relative;
   box-sizing: border-box;
 
