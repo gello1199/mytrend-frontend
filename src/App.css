@@ -111,7 +111,7 @@ body {
 
 .item-card {
     border-style: solid;
-    background-color: black;
+    background-color: white;
     padding: 10px;
     border-radius: 3%;
     margin: 10px;
@@ -119,7 +119,7 @@ body {
     overflow: auto;
     width: 30%;
     float: left;
-    opacity: 90%;
+    /* opacity: 90%; */
 }
 
 .image {
