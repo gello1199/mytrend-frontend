@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import WelcomePage from './WelcomePage';
-import ItemsList from './Items/Item/ItemsList';
+import ItemsList from './ItemsList';
 import ItemsFavorites from './itemsFavorites';
 import ItemsForm from './Items/Forms/ItemsForm';
 
