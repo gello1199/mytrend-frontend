@@ -38,7 +38,7 @@ class ItemsForm extends Component {
         return (
             <div className="item-form">
             <h3>Create A New Look</h3>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} data-netlify="true">
                 <div>
                 <input 
                 name="name"
